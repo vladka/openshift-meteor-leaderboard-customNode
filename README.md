@@ -33,7 +33,7 @@ That's it! Check out your new Meteor.js application at:
 
 ENJOY ! Vladka.
 
-## How Ccange version of nodeJS
+## Change version of nodeJS
  Example above uses node version 0.10.24. 
  You can change it anywhere by changing file 
  on the path: 
