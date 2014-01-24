@@ -4,7 +4,7 @@ Deploy [meteor.js](http://meteor.com/) application bundles on [OpenShift](http:/
 This example uses: Meteor example application (leaderboard) with custom version of nodeJS ready for deploy to openshift.
 
 
-<a href='https://openshift.redhat.com/community/blogs/cloudy-with-a-chance-of-meteorjs'><img width="200" height="100" src='https://www.meteor.com/universe.png'/></a>
+<a href='https://openshift.redhat.com/community/blogs/cloudy-with-a-chance-of-meteorjs'><img width="300" height="200" src='https://www.meteor.com/universe.png'/></a>
 
 ## Configure your OpenShift gear 
  Althoug you can see node-js-0.6, it is only startup "cartridge", it uses nodeJs version 10.24.  Name of our application is "myapp". 
@@ -19,7 +19,18 @@ That's it! Check out your new Meteor.js application at:
 
 ENJOY ! Vladka.
 
+## Change version of node
+ Example above uses node version 0.10.24. 
+ You can change it by changing file 
+ on the path: 
 
+    myapp\.openshift\markers\NODEJS_VERSION 
+
+then don't forgot to push changes to openshift 
+   
+    git add . 
+    git commit -am "any message"
+    git push
 
 
 
