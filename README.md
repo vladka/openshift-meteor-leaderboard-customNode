@@ -12,13 +12,13 @@ This example uses: Meteor example application (leaderboard) with custom version 
  There are 2 choices: one gear (1 Gear = NodeJs+Mongo) or scaled. I recomended you use scalable version, because Mongo with Node is to big for one gear.
  Not-scalable solution (MongoDb has 0.5Gb, Suma is 0.8Gb, Limit is 1Gb !!): 
      
-     rhc app create myapp  nodejs-0.6 mongodb-2.2 --from-code=https://github.com/vladka/openshift-meteor-leaderboard-customNode.git
+     rhc app create myapp  nodejs-0.6 mongodb-2.2  --from-code=git://github.com/vladka/openshift-meteor-leaderboard-customNode.git
      #see quota:
      rhc show-app myapp --gears quota
 
  Scalable solution(Mongo has own gear, it is great!):
 
-     rhc app create myapp  nodejs-0.6 --from-code=https://github.com/vladka/openshift-meteor-leaderboard-customNode.git -s     
+     rhc app create myapp  nodejs-0.6 --from-code=git://github.com/vladka/openshift-meteor-leaderboard-customNode.git -s     
      rhc cartridge add mongodb-2.2 -a myapp
      #You can limit scale-number (optionally):
      rhc scale-cartridge nodejs-0.6 -a myapp --min 1 --max 2
